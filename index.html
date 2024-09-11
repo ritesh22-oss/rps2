@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Rock Paper Scissor Game</title>
+</head>
+<body>
+	<div class="app">
+		
+		<div class="menu" id="menu">
+			<h1 class="title" id="titleMenu">Rock Paper Scissors</h1>
+			<h3 class="miniText" id="miniText">Mini Game</h3>
+			<div class="menuBody">
+				<button class="menuButton" id="playButton">Play</button>
+				<button class="menuButton" id="infoButton">Tutorial</button>
+				<button class="menuButton" id="exitButton">Exit</button>
+			</div>
+		</div>
+		<!--Tombol dark mode-->
+		<button class="modeButton" id = "modeButton" onclick="toggleMode()"><img src="dark_mode.png" class="darkmode"></button>
+		
+		<!--Tampilan game-->
+		<div class = "game" id="games">
+			<!--Judul Game -->
+			<h1 class = "title" id = "titleGame">Rock Paper Scissor</h1>
+			<!--Tampilan Score -->
+			<div class = "score" id="scores">
+				<h4>Best Of Five</h4>
+				<div class="result"></div>
+				<div class="popUp">
+					<img src="rockmatch.png" alt="gambar batu" class="player-hand">
+					<h1 class="Vs">VS</h1>
+					<img src="rockmatch.png" alt="gambar batu" class="bot-hand">
+				</div>
+				<!--Khusus bagian poin-->
+				<div class="point">
+					<div class = "playerScore">
+						<p class = "playerPoint">0</p>
+						<h2>Player</h2>
+					</div>	
+					<div class = "botScore">
+						<p class = "botPoint">0</p>
+						<h2>Bot</h2>
+					</div>	
+				</div>
+			</div>
+			<!--Tampilan diluar kolom-->
+			<div class="movesleft">Moves Left : 5 </div>
+			<div class="countdown" id="countdown">Timer Left : 10 s</div>
+			<div class="move">Choose Your Attempt!!</div>
+			<!--Button untuk rock paper scissors-->
+			<div class="options">
+				<button class="button" id="rock"><img class="imageButton" src="rock.png" >rock</button>
+				<button class="button" id="paper"><img class="imageButton" src="paper.png">paper</button>
+				<button class="button" id="scissor"> <img class="imageButton" src="scissors.png">scissors</button>
+			</div>
+			<!--Bagian button ketika gameover -->
+			<button class="finalButton" id="reset">Reset</button>
+			<button class="finalButton" id="mainMenu">Main Menu</button>
+		</div>
+
+		<!--Tampilan demo tutorial-->
+		<div class="tutorial" id=""tutorial>
+			<div class="title" id="titleInfo">Tutorial</div>
+			<div class="score" id="inform">
+				<div class="info" id="intro">
+					<div>Welcome to "Rock Paper Scissors Mini Web Game".</div>
+					<div>This game is based on the simple fun of Rock Paper Scissors!</div>
+				</div>
+				<div class = "infoImage">
+					<div>
+						<img class="imageButton" src="rock.png">
+						<span class="caption">Rock Icon</span>
+					</div>
+					<div>
+						<img class="imageButton" src="paper.png">
+						<span class="caption">Paper Icon</span>
+					</div>
+					<div>
+						<img class="imageButton" src="scissors.png">
+						<span class="caption">Scissors Icon</span>
+					</div>
+				</div>
+				<div class="info" id="content">
+					<div>In this game you will fight a bot.</div>
+					<div>You will click on button that contains one of these icons. You are given 10 seconds to press one of these buttons,
+			 				if during that time you do not press it, the points will automatically belong to the bot. To determine victory in this game, we use the best of five system with accumulated points obtained according to the provisions of the Rock Paper Scissors game in real life.</div>
+				</div> 
+				<button class="menuButton" id="backMenu" onclick="backMenu()">Main Menu</button>
+			</div>
+		</div>
+	</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

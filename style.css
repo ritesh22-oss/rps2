@@ -1,0 +1,519 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+*:not(h1, h2) {
+    font-family: "poppins";
+    font-size: 2vh;
+}
+
+body{
+	background-image: linear-gradient(to right bottom, #191b2a, #e2d8d8);
+	color: #fff;
+}
+
+.light-mode {
+	background-image: linear-gradient(to right bottom, #ffffff, #d3d8ee);
+	color: rgb(0, 0, 0);
+}
+
+.title-light{
+	top: 0;
+	font-size: 7vh;
+	z-index: 2;
+	margin-top: 10px;
+    background-clip:text;
+	background: -webkit-linear-gradient( rgb(24, 24, 25),rgb(124, 139, 171));
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	margin-bottom: 10px;
+} 
+.miniText-light{
+	color:black;
+	font-size: 3vh;
+}
+
+
+.menu-light{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+	text-indent: 50px;
+	letter-spacing: 0.4vw;
+	line-height: 8vh;
+	position: absolute; 
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-image: linear-gradient(to right bottom, #ffffff, #d3d8ee);
+}
+/* Bagian menu utama */
+.modeButton{
+	cursor : pointer;
+	position: absolute;
+	display: flex;
+	border-radius: 1000px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin: 3%;
+	right: 5vw;
+}
+
+.modeButton:hover{
+	cursor:pointer;
+	transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: scale(110%);
+	background: #f9c440;
+}
+
+.darkmode{
+	width: 4vw;
+	height: 4vw;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	text-indent: 50px;
+	letter-spacing: 0.4vw;
+	line-height: 8vh;
+	position: absolute; 
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	text-align: center;
+	background-image: linear-gradient(to right bottom, #191b2a, #1d2356);
+}
+
+.menuBody{
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	margin-top: 8vh;
+    align-items: center;
+    flex-direction: column;
+	
+}
+#infoButton{
+	margin-bottom: 7vh;
+	margin-top: 7vh;
+}
+
+.menuButton {
+    padding: 0.8rem;
+    width: 120px; /* Increased width */
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    background-image: linear-gradient(to left bottom, rgb(198, 134, 24), rgb(185, 190, 46)); /* Darker gradient */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+.menuButton:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Scale effect on hover */
+    background: rgb(189, 183, 18); /* Darker hover color */
+    width: 130px; /* Animated width change */
+}
+
+.menuButton-light {
+    padding: 0.8rem;
+    width: 100px; /* Increased width */
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    background-image: linear-gradient(to left bottom, #6b73b5, #4d5681); /* Darker light button */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+.menuButton-light:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Scale effect on hover */
+    background: #4d5681; /* Darker hover color */
+    width: 110px; /* Animated width change */
+}
+
+.game{
+	display: none;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	color:white
+}
+
+.game-light{
+	display: none;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	color:black;
+}
+
+.title{
+	top: 0;
+	font-size: 7vh;
+	z-index: 2;
+	background-clip:text;
+	background: -webkit-linear-gradient(rgb(0, 255, 229), rgb(37, 85, 75));
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+/*Tampilan Skor */
+.score{
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+	border-radius: 2vw;
+    width: 40vw;
+    height: 55vh;
+	background-color: rgb(21, 21, 21);
+	background-image: linear-gradient(to right bottom, #112c40,#272b45);
+    text-align: center;
+}
+.score-light{
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+	border-radius: 2vw;
+    width: 40vw;
+    height: 55vh;
+	color: black;
+	background-color: rgb(21, 21, 21);
+	background-image: linear-gradient(to right bottom, #dce2f0	,#c8cfec);
+    text-align: center;	 	 
+}
+.point{
+	justify-content: space-evenly;
+    align-items: end;
+    text-align: center;
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	margin-bottom: 1vw;
+}
+
+
+
+.playerPoint,.botPoint{
+	text-align: center;
+	font-size: 1.4rem;
+	margin-top: 1rem;
+	margin-bottom: 1vw;
+}
+.playerScore h2,.botScore h2{
+	font-size: 1.2rem;
+}
+.popUp{
+	display: flex;
+	margin-top: 1vh;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+.Vs{
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+
+.options{
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	margin-top: 3vh;
+}
+
+
+.button:hover{
+	cursor:pointer;
+	transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: scale(110%);
+	background: rgb(27, 211, 174) ;
+}	
+.button-light:hover{
+	cursor:pointer;
+	transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: scale(110%);
+	background: #8f9fee;
+}	
+
+/* button rock paper scissors */
+.button{
+	display: flex;
+	flex-direction: column;
+	outline: none;
+	background-image: linear-gradient(to left bottom, rgb(27, 211, 174), rgb(40, 104, 91));
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	margin: 3%;
+    position: relative;
+	font-weight: bold;
+    padding: 1vh 0.7vw;
+    border-radius: 2vh;
+}
+.button-light{
+	display: flex;
+	flex-direction: column;
+	outline: none;
+	background-image: linear-gradient(to left bottom,  #bdcdfd,#8f9fee);
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	margin: 3%;
+    position: relative;
+	font-weight: bold;
+    padding: 1vh 0.7vw;
+    border-radius: 2vh;
+}
+
+button:disabled{
+  background-color: #878787;
+  color: white;
+}
+button:disabled:hover{
+	background-color: #b8b6b6;
+	cursor: wait;
+  }
+
+.bot-hand {
+	width:7vw;
+	height:7vw;
+
+}
+.player-hand {
+	width:7vw;
+	height:7vw;
+    transform: rotateY(180deg);
+}
+.imageButton{
+	width: 6vh;
+	height: 6vh;
+}
+
+.movesleft{
+	margin-top: 3vh;
+	margin-bottom: 1.5vh;
+}
+.move{
+	font-size: 2vw	;
+	font-weight: bold;
+	margin-top: 2vh;
+}
+
+.result{
+	display: flex;
+	margin-right: 10vw;
+	margin-left: 10vw;
+	font-size: 1.2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+/* button akhir */
+.finalButton {
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+	background-image: linear-gradient(to left bottom, rgb(27, 211, 174), rgb(40, 104, 91));
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.finalButton:hover{
+	cursor:pointer;
+	transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: scale(110%);
+	background: rgb(27, 211, 174) ;
+}
+.finalButton-light {
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+	background-image: linear-gradient(to left bottom, #bdcdfd,#8f9fee);
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.finalButton-light:hover{
+	cursor:pointer;
+	transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+	transform: scale(110%);
+	background: #8f9fee ;
+}
+/* Menu Tutorial */
+#inform{
+	display: flex;
+    justify-content: space-evenly;
+	flex-direction: column;
+    margin: 0 auto;
+	border-radius: 2vw;
+    width: 70vw;
+    height: 80vh;
+}
+.tutorial{
+	display: none;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+#intro{
+	line-height: 4vh;
+}
+#content{
+	line-height: 3vh;
+}
+.infoImage {
+	display: flex;
+	width: 30vw;
+	justify-content: space-evenly;
+}
+.caption{
+	display: block;
+}
+#content div,#intro div{
+	width: 50vw;
+}
+
+/* Responsive Design Mode HP*/
+@media screen and (max-width: 612px) 
+{
+	.title,.title-light{
+		text-align: center;
+		font-size: 6.6vw;
+	}
+	#title{
+		font-size: 7vw;
+		margin: 7vw;
+	}
+	.score,.score-light{
+		width: 80vw;
+		height: 60vh;
+	}
+	.playerPoint,.botPoint{
+		font-size: 1rem;;
+	}
+	.playerScore h2,.botScore h2{
+		font-size: 1.2rem;
+	}
+	.options{
+		width: 80vw;
+	}
+	.bot-hand,.player-hand{
+		width : 9vh;
+		height: 9vh;
+	}
+	.imageButton{
+		width: 10vw;
+		height: 10vw;
+	}
+	.darkmode{
+		width: 8vw;
+		height: 8vw;
+	}
+	.move{
+		font-size: 1.1rem;
+	}
+	.info div{
+		font-size: 0.8rem;
+		line-height: 5vw;
+	}	
+	#intro div{
+		width: 50vw;
+	}
+	.infoImage{
+		width: 40vw;
+	}
+	.caption{
+		font-size: 3vw;
+	}
+}
+/* Animasi */
+@keyframes shakePlayer {
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    25%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    35%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    65%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    85%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeBot {
+    0%{
+        transform: translateY(0px);
+    }
+    15%{
+        transform: translateY(-50px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    35%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    65%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}                               
